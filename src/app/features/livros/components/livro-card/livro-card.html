@@ -1,0 +1,8 @@
+<article class="card">
+  <h2>{{ livro().titulo }}</h2>
+  <p>{{ livro().autor }}</p>
+  <p>Categoria: {{ livro().categoria }}</p>
+  <p>Ano: {{ livro().ano }}</p>
+  <p>Status: {{ livro().status }}</p>
+  <a [routerLink]="['/livros', livro().id]">Ver detalhes</a>
+</article>

@@ -1,0 +1,16 @@
+<main class="container">
+  <h1>Catálogo de livros</h1>
+
+  <app-filtro-livros
+    [pesquisa]="pesquisa()"
+    [status]="filtroStatus()"
+    (pesquisaChange)="atualizarPesquisa($event)"
+    (statusChange)="atualizarStatus($event)"
+  />
+
+  <app-lista-livros
+    [livros]="livrosFiltrados()"
+    [carregando]="carregando()"
+    [erro]="erro()"
+  />
+</main>

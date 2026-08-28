@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "614223c1-1bc1-45aa-90b1-a70fc13bd902"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -73,7 +74,12 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "tsconfig.spec.json",
+            "buildTarget": "::development",
+            "runner": "vitest"
+          }
         }
       }
     }
