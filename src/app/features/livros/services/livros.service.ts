@@ -8,7 +8,7 @@ import { Livro, StatusLivro } from "../models/livro";
 })
 export class LivrosService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = "https://api-de-livros-3i55.onrender.com";
+  private readonly apiUrl = "https://api-de-livros-3i55.onrender.com/api/livros";
 
   listar(): Promise<Livro[]> {
     return firstValueFrom(this.http.get<Livro[]>(this.apiUrl));
