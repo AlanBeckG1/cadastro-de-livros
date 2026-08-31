@@ -103,6 +103,6 @@ describe("LivrosService", () => {
     expect(req.request.method).toBe("DELETE");
     req.flush(null);
 
-    await expect(promessa).resolves.toBeUndefined();
+    await expect(promessa).resolves.toBeNull();
   });
 });
