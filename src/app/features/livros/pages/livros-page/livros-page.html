@@ -1,6 +1,8 @@
 <main class="container">
   <h1>Catálogo de livros</h1>
 
+  <a routerLink="/livros/novo">+ Cadastrar novo livro</a>
+
   <app-filtro-livros
     [pesquisa]="pesquisa()"
     [status]="filtroStatus()"

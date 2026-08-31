@@ -5,6 +5,7 @@ import {
   inject,
   signal,
 } from "@angular/core";
+import { RouterLink } from "@angular/router";
 
 import { FiltroLivros } from "../../components/filtro-livros/filtro-livros";
 import { ListaLivros } from "../../components/lista-livros/lista-livros";
@@ -14,7 +15,7 @@ import { LivrosService } from "../../services/livros.service";
 @Component({
   selector: "app-livros-page",
   standalone: true,
-  imports: [FiltroLivros, ListaLivros],
+  imports: [FiltroLivros, ListaLivros, RouterLink],
   templateUrl: "./livros-page.html",
   styleUrl: "./livros-page.css",
 })
